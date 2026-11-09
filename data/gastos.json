@@ -1,0 +1,5 @@
+[
+  { "id": 1, "descripcion": "Apunte de Programación", "monto": 4500, "categoria": "Estudio", "fecha": "2026-11-03" },
+  { "id": 2, "descripcion": "Carga de SUBE", "monto": 10000, "categoria": "Transporte", "fecha": "2026-11-04" },
+  { "id": 3, "descripcion": "Almuerzo en el buffet", "monto": 6800, "categoria": "Comida", "fecha": "2026-11-05" }
+]

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registro de Gastos</title>
+  <link rel="stylesheet" href="/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>💸 Registro de Gastos</h1>
+    <a href="/nuevo" class="boton">+ Nuevo gasto</a>
+  </header>
+
+  <main>
+    <div class="tarjeta total">
+      <p>Total gastado</p>
+      <h2 id="total">$ 0</h2>
+    </div>
+
+    <div class="tarjeta">
+      <table>
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Descripción</th>
+            <th>Categoría</th>
+            <th>Monto</th>
+          </tr>
+        </thead>
+        <!-- Las filas las agrega app.js con los datos del servidor -->
+        <tbody id="lista"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

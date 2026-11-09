@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f4f7;
+  color: #222;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #0f766e;
+  color: white;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+main {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+.tarjeta {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.total p {
+  margin: 0;
+  color: #666;
+}
+
+.total h2 {
+  margin: 5px 0 0;
+  font-size: 32px;
+  color: #0f766e;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+.boton {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  background: #0f766e;
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+header .boton {
+  margin-top: 0;
+  background: white;
+  color: #0f766e;
+  font-weight: bold;
+}
+
+.error {
+  color: #b42318;
+  font-weight: bold;
+}
+
+.centrado {
+  text-align: center;
+}
+
+.grande {
+  font-size: 70px;
+  margin: 0;
+  color: #0f766e;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nuevo gasto</title>
+  <link rel="stylesheet" href="/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>💸 Registro de Gastos</h1>
+    <a href="/" class="boton secundario">Volver</a>
+  </header>
+
+  <main>
+    <div class="tarjeta">
+      <h2>Nuevo gasto</h2>
+
+      <!-- Acá se muestra el error que manda el servidor -->
+      <p id="error" class="error"></p>
+
+      <!-- El formulario envía los datos al servidor con POST /gastos -->
+      <form action="/gastos" method="POST">
+        <label>Descripción</label>
+        <input type="text" name="descripcion" placeholder="Ej.: Apunte de Programación">
+
+        <label>Monto ($)</label>
+        <input type="number" name="monto" step="0.01" placeholder="0">
+
+        <label>Categoría</label>
+        <select name="categoria">
+          <option value="">Elegí una categoría</option>
+          <option>Comida</option>
+          <option>Transporte</option>
+          <option>Estudio</option>
+          <option>Servicios</option>
+          <option>Otros</option>
+        </select>
+
+        <button type="submit" class="boton">Guardar</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="/nuevo.js"></script>
+</body>
+</html>
