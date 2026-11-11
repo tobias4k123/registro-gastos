@@ -1,4 +1,4 @@
-// Módulo de datos (no se ejecuta solo: lo importan rutas.js y scripts/).
+// Módulo de datos (no se ejecuta solo: lo importa rutas.js).
 // Ahora los gastos se guardan en MongoDB mediante el modelo Gasto (models/gasto.js).
 const { Gasto, CATEGORIAS } = require('./models/gasto');
 
