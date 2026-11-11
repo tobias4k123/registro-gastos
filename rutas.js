@@ -11,6 +11,16 @@ const router = express.Router();
 // caído), el error se pasa a next() y lo atrapa el middleware de errores de index.js.
 const asincrono = (fn) => (req, res, next) => fn(req, res, next).catch(next);
 
+// Devuelve la fecha de hoy en formato AAAA-MM-DD según la hora LOCAL de la computadora.
+// (toISOString() usa UTC: después de las 21 h en Argentina daría el día siguiente).
+function fechaDeHoy() {
+  const ahora = new Date();
+  const anio = ahora.getFullYear();
+  const mes = String(ahora.getMonth() + 1).padStart(2, '0');
+  const dia = String(ahora.getDate()).padStart(2, '0');
+  return `${anio}-${mes}-${dia}`;
+}
+
 // 1) GET / → página principal con la lista de gastos.
 router.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'vistas', 'index.html'));
@@ -48,7 +58,7 @@ router.post(
       descripcion: descripcion.trim(),
       monto: monto,
       categoria: categoria,
-      fecha: new Date().toISOString().slice(0, 10), // fecha de hoy: AAAA-MM-DD
+      fecha: fechaDeHoy(), // fecha de hoy en hora local: AAAA-MM-DD
     });
 
     // Redirección 2: si salió todo bien, vuelve a la página principal.
