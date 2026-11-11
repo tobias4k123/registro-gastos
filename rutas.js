@@ -1,5 +1,5 @@
 // Módulo de rutas (no se ejecuta solo: lo importa index.js).
-// Para correr la aplicación: npm start (desde la carpeta registro-gastos-main).
+// Para correr la aplicación: npm start (desde la carpeta registro-gastos).
 // Módulo propio con todas las rutas de la aplicación.
 const express = require('express');
 const path = require('path');
