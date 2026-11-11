@@ -3,8 +3,8 @@
 const { Gasto, CATEGORIAS } = require('./models/gasto');
 
 // Devuelve todos los gastos, del más reciente al más antiguo.
-// lean() devuelve objetos planos (más liviano); toJSON no se aplica, así que
-// convertimos _id a id a mano.
+// lean() devuelve objetos planos en lugar de documentos de Mongoose (más liviano).
+// Armamos a mano el objeto que va al cliente: _id pasa a llamarse id.
 async function leerGastos() {
   const gastos = await Gasto.find().sort({ fecha: -1, createdAt: -1 }).lean();
   return gastos.map((g) => ({

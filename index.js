@@ -1,5 +1,5 @@
 // Servidor principal de la aplicación Registro de Gastos.
-// Comando para ejecutarlo (desde la carpeta registro-gastos-main):
+// Comando para ejecutarlo (desde la carpeta registro-gastos):
 //   npm start        (equivale a: node index.js)
 // Para desarrollo con reinicio automático al guardar cambios:
 //   npm run dev

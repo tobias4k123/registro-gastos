@@ -15,9 +15,4 @@ async function conectarDB() {
   console.log(`Conectado a MongoDB: ${mongoose.connection.name}`);
 }
 
-// Cierra la conexión (lo usan los scripts y las pruebas para terminar el proceso).
-async function desconectarDB() {
-  await mongoose.disconnect();
-}
-
-module.exports = { conectarDB, desconectarDB, MONGODB_URI };
+module.exports = { conectarDB, MONGODB_URI };

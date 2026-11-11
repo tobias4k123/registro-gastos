@@ -16,15 +16,6 @@ const gastoSchema = new mongoose.Schema(
   {
     // timestamps: Mongoose agrega createdAt y updatedAt automáticamente.
     timestamps: true,
-    // toJSON: al enviar al cliente, _id pasa a llamarse "id" y se quitan campos internos.
-    toJSON: {
-      transform: (doc, ret) => {
-        ret.id = ret._id.toString();
-        delete ret._id;
-        delete ret.__v;
-        return ret;
-      },
-    },
   }
 );
 
